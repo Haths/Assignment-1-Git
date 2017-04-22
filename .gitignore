@@ -31,7 +31,7 @@
 
 *.db
 *.sln
-*.tloh
+*.tlog
 *.pdb
 *.ilk
 *.opendb
@@ -39,3 +39,6 @@
 *.vcxproj
 *.suo
 *.vcxproj
+*.lastbuildstate
+*.idb
+*.log
