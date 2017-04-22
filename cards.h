@@ -8,6 +8,10 @@
 #include <vector>
 #include <fstream>
 
+#define MAXCARDS 14
+
+
+
 #ifndef CARDS_H
 #define CARDS_H
 
@@ -66,6 +70,8 @@ class Hand {
       // You decide what functions you'll need...
 
    private:
+	  Card hand[MAXCARDS];
+	  int  NumberOfCards;
       // You decide what fields you'll need...
 };
 
@@ -80,6 +86,7 @@ class Player {
 
    private:
       int money;
+
       // You decide what extra fields (if any) you'll need...
 };
 
