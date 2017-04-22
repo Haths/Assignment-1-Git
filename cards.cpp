@@ -208,4 +208,7 @@ double Player::access_money() const {
 double Player::update_money( double m) {
 	money = m;
 	return money;
+
 }
+
+// this is to test git ignore
