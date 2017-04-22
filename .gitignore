@@ -28,3 +28,9 @@
 *.out
 *.app
 /Project1/Project1.VC.VC.opendb
+
+*.db
+*.sln
+*.tloh
+*.pdb
+*.ilk
