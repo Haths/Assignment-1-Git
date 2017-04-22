@@ -4,7 +4,7 @@
 This is my solution to Assignment-1 **Git** for Peak Ten See  .
 
 ### Goal:  
-To familiarize yourself with version control software. 
+To familiarize myself with version control software. 
 
 ### The mechanics of the game:
 The game is played with a 'Spanish baraja'.
