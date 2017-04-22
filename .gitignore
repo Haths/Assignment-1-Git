@@ -34,3 +34,7 @@
 *.tloh
 *.pdb
 *.ilk
+*.opendb
+*.filters
+*.vcxproj
+*.suo
