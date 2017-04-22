@@ -80,12 +80,15 @@ class Player {
    public:
       // Constructor. 
       //    Assigns initial amount of money
-      Player(int m);
+      Player(double m);
 
+	  double access_money() const;
+
+	  double update_money( double m );
       // You decide what functions you'll need...
 
    private:
-      int money;
+      double money;
 
       // You decide what extra fields (if any) you'll need...
 };
