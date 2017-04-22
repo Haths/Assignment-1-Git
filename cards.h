@@ -66,11 +66,17 @@ class Hand {
    public:
       // A vector of Cards
       Hand();
+	  void acceptCard(Card c);
 
+	  Card getCard(int index) const;
+
+	  double  handValue() const;
+
+	  int  handNum() const;
       // You decide what functions you'll need...
 
    private:
-	  Card hand[MAXCARDS];
+	  std::vector<Card> hand;
 	  int  NumberOfCards;
       // You decide what fields you'll need...
 };

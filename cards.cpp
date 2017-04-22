@@ -189,6 +189,53 @@ bool Card::operator < (Card card2) const {
    Hand class
    ************************************************* */
 // Implemente the member functions of the Hand class here.
+Hand::Hand() {
+	NumberOfCards = 0;
+}
+
+void Hand::acceptCard(Card c) {
+	
+	if (NumberOfCards >= MAXCARDS) {
+		throw(std::logic_error("there is no space of another card!!"));
+	}
+	if (NumberOfCards < MAXCARDS) {
+		hand.push_back(c);
+		NumberOfCards++;
+	}
+}
+
+Card Hand::getCard(int index) const
+{
+	if (index >= NumberOfCards) {
+		throw(std::logic_error("logic error index out of bound"));
+	}
+	Card c = hand[index];
+
+	return(c);
+}
+
+double  Hand::handValue() const
+{
+	// TODO : total up the points in this player's hand
+	//        you will need to figure out how to handle Ace's that might be worth 1 or 11
+	double total = 0;
+	double count = 0;
+	for (int i(0); i < NumberOfCards; i++) {
+		if (hand[i].get_rank() > 8) {
+			count = 1 / 2;
+		}
+		else count = hand[i].get_rank();
+		
+		total = total + hand[i].get_rank();
+		
+	}
+	
+	return(total);
+}
+
+int  Hand::handNum() const {
+	return(NumberOfCards);
+}
 
 
 
