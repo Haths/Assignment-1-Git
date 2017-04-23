@@ -204,14 +204,15 @@ void Hand::acceptCard(Card c) {
 	}
 }
 
-Card Hand::getCard(int index) const
+void Hand::printCard() const
 {
-	if (index >= NumberOfCards) {
-		throw(std::logic_error("logic error index out of bound"));
+	double c = 0;
+	
+	for (int i = 0; i < NumberOfCards; ++i) {
+		std::cout << "	" << hand[i].get_spanish_rank() << " de " << hand[i].get_spanish_suit() ;
+		std::cout << "	(" << hand[i].get_english_rank() << " of " << hand[i].get_english_suit() << ").\n";
 	}
-	Card c = hand[index];
-
-	return(c);
+	
 }
 
 double  Hand::handValue() const

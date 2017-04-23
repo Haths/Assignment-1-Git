@@ -68,7 +68,7 @@ class Hand {
       Hand();
 	  void acceptCard(Card c);
 
-	  Card getCard(int index) const;
+	  void printCard() const;
 
 	  double  handValue() const;
 
