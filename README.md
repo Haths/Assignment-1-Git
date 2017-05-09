@@ -6,6 +6,8 @@ This is my solution to Assignment-1 **Git** for Peak Ten See  .
 ### Goal:  
 To familiarize myself with version control software. 
 
+### work flow:
+create a repository -> upload original files -> commits in local machine in PIC lab -> commis in local machine in starbuck -> create experiment branch -> do some stuff -> merge experiment branch to master -> create experiment-hand branch ...
 ### The mechanics of the game:
 The game is played with a 'Spanish baraja'.
 ![cards](https://github.com/Haths/Assignment-1-Git/blob/master/baraja-canaria.jpg)  
