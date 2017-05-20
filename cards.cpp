@@ -156,13 +156,13 @@ string Card::get_english_rank() const {
 		rankName = "Seven";
 		break;
 	case SOTA:
-		rankName = "Ten";
+		rankName = "Jack";
 		break;
 	case CABALLO:
-		rankName = "Eleven";
+		rankName = "Knight";
 		break;
 	case REY:
-		rankName = "Twelve";
+		rankName = "King";
 		break;
 	default: break;
 	}
@@ -221,13 +221,13 @@ double  Hand::handValue() const
 	//        you will need to figure out how to handle Ace's that might be worth 1 or 11
 	double total = 0;
 	double count = 0;
-	for (int i(0); i < NumberOfCards; i++) {
+	for (int i(0); i < NumberOfCards; ++i) {
 		if (hand[i].get_rank() > 8) {
-			count = 1 / 2;
+			count = 0.5;
 		}
 		else count = hand[i].get_rank();
 		
-		total = total + hand[i].get_rank();
+		total = total + count;
 		
 	}
 	
