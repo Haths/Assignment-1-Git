@@ -156,13 +156,13 @@ string Card::get_english_rank() const {
 		rankName = "Seven";
 		break;
 	case SOTA:
-		rankName = "Ten";
+		rankName = "Jack";
 		break;
 	case CABALLO:
-		rankName = "Eleven";
+		rankName = "Knight";
 		break;
 	case REY:
-		rankName = "Twelve";
+		rankName = "King";
 		break;
 	default: break;
 	}
@@ -189,6 +189,54 @@ bool Card::operator < (Card card2) const {
    Hand class
    ************************************************* */
 // Implemente the member functions of the Hand class here.
+Hand::Hand() {
+	NumberOfCards = 0;
+}
+
+void Hand::acceptCard(Card c) {
+	
+	if (NumberOfCards >= MAXCARDS) {
+		throw(std::logic_error("there is no space of another card!!"));
+	}
+	if (NumberOfCards < MAXCARDS) {
+		hand.push_back(c);
+		NumberOfCards++;
+	}
+}
+
+void Hand::printCard() const
+{
+	double c = 0;
+	
+	for (int i = 0; i < NumberOfCards; ++i) {
+		std::cout << "	" << hand[i].get_spanish_rank() << " de " << hand[i].get_spanish_suit() ;
+		std::cout << "	(" << hand[i].get_english_rank() << " of " << hand[i].get_english_suit() << ").\n";
+	}
+	
+}
+
+double  Hand::handValue() const
+{
+	// TODO : total up the points in this player's hand
+	//        you will need to figure out how to handle Ace's that might be worth 1 or 11
+	double total = 0;
+	double count = 0;
+	for (int i(0); i < NumberOfCards; ++i) {
+		if (hand[i].get_rank() > 8) {
+			count = 0.5;
+		}
+		else count = hand[i].get_rank();
+		
+		total = total + count;
+		
+	}
+	
+	return(total);
+}
+
+int  Hand::handNum() const {
+	return(NumberOfCards);
+}
 
 
 
